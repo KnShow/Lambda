@@ -4,24 +4,21 @@ import android.util.Log;
 
 import java.time.LocalDate;
 
-/**
- * male 男   female 女
- */
-public class Person {
+public class Teacher extends Person{
     public static final String TAG = "lambda";
+    public Teacher(){}
+
+    public Teacher(int age) {
+        this.age = age;
+    }
 
     public enum Sex {
         MALE, FEMALE
     }
 
     private int age;
-    public Person(){}
 
-    public Person(int age) {
-        this.age = age;
-    }
-
-    public Person(int age, String name, Sex gender) {
+    public Teacher(int age, String name, Person.Sex gender) {
         this.age = age;
         this.name = name;
         this.gender = gender;
@@ -36,26 +33,8 @@ public class Person {
     }
 
     String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     LocalDate birthday;
-    Sex gender;
-
-    public Sex getGender() {
-        return gender;
-    }
-
-    public void setGender(Sex gender) {
-        this.gender = gender;
-    }
-
+    Person.Sex gender;
     String emailAddress;
 
     //打印Person的信息
