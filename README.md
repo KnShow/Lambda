@@ -1,2 +1,2 @@
 # Lambda
-Lambda表达式再探
+Lambda表达式
